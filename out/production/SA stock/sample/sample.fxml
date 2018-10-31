@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <Pane prefHeight="542.0" prefWidth="571.0">
+         <children>
+            <TableView fx:id="tableMedicine" layoutX="27.0" layoutY="65.0" prefHeight="268.0" prefWidth="514.0">
+              <columns>
+                <TableColumn fx:id="columnId" prefWidth="103.0" text="รหัสสินค้า" />
+                <TableColumn fx:id="columnName" minWidth="0.0" prefWidth="181.0" text="ชื่อสินค้า" />
+                  <TableColumn fx:id="columnLotte" prefWidth="72.0" text="จำนวนล็อต" />
+                  <TableColumn fx:id="columnqualityofkeep" minWidth="7.0" prefWidth="82.0" text="จำนวนยา" />
+                  <TableColumn fx:id="columnunitofkeep" prefWidth="79.0" text="หน่วย" />
+              </columns>
+            </TableView>
+            <Button layoutX="42.0" layoutY="484.0" mnemonicParsing="false" onAction="#createMedicine" text="เพิ่มสินค้าใหม่">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="220.0" layoutY="484.0" mnemonicParsing="false" onAction="#addMedicine" prefHeight="35.0" prefWidth="128.0" text="รับยา">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="397.0" layoutY="484.0" mnemonicParsing="false" onAction="#deleteMedicine" prefHeight="35.0" prefWidth="128.0" text="เบิกยา">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="194.0" layoutY="27.0" text="รายการสินค้าภายในคลัง">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Button layoutX="42.0" layoutY="421.0" mnemonicParsing="false" onAction="#LotteDetail" prefHeight="35.0" prefWidth="128.0" text="ข้อมูลล็อต">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="95.0" layoutY="366.0" text="ค้นหาชื่อสินค้า">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search" layoutX="294.0" layoutY="364.0" onInputMethodTextChanged="#search" onKeyReleased="#search" />
+            <Button layoutX="220.0" layoutY="421.0" mnemonicParsing="false" onAction="#SaleDetail" prefHeight="35.0" prefWidth="128.0" text="ข้อมูลเบิกยา">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</GridPane>

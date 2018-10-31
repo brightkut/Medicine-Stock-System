@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="542.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller6">
+   <children>
+      <Label layoutX="226.0" layoutY="34.0" text="ข้อมูลการเบิกยา" textAlignment="CENTER">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button layoutX="257.0" layoutY="454.0" mnemonicParsing="false" onAction="#backToHome" text="กลับ">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tableSale" layoutX="27.0" layoutY="95.0" prefHeight="327.0" prefWidth="517.0">
+        <columns>
+          <TableColumn fx:id="columnsaleid" prefWidth="105.0" text="เลขที่ใบเบิกยา" />
+          <TableColumn fx:id="columnNumberlotte" prefWidth="102.0" text="หมายเลขล็อต" />
+            <TableColumn fx:id="columnName" prefWidth="139.0" text="ชื่อสินค้า" />
+            <TableColumn fx:id="columnqualitysale" prefWidth="82.0" text="ปริมาณที่เบิก" />
+            <TableColumn fx:id="columndate" prefWidth="88.0" text="วันที่เบิก" />
+        </columns>
+      </TableView>
+   </children>
+</Pane>
